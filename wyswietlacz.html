@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td, table, tr{
+            border: 2px black solid;
+            border-collapse: collapse;
+        }
+        td{
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>  
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <script>
+        let tds = document.querySelectorAll("td")
+        tds.forEach(td => {
+            td.addEventListener("click", function(td){
+                if(td.style == "background-color: white"){
+                    td.style = "background-color: black"
+                }else{
+                    td.style = "background-color: white"
+                }
+            })
+        });
+        
+    </script>
+</body>
+</html>
