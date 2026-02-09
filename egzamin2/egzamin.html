@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        div{
+            width: 50%;
+            height: 470px;
+            float: left;
+        }
+        input{
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <img src="pszczola.jpg" alt="" id="pszczola"><br>
+    <input type="radio" name="cos" id="blur">blur <br>
+    <input type="radio" name="cos" id="sepia">sepia <br>
+    <input type="radio" name="cos" id="negatyw">negatyw <br>
+    <button id="btn1">zastosuj</button>
+    </div><br>
+    <div>
+    <img src="owoce.jpg" alt="">
+    </div><br>
+    <div>
+    <img src="pomarancza.jpg" alt="">
+    </div><br>
+    <div>
+    <img src="zolw.jpg" alt="">
+    </div><br>
+
+    <script>
+        let btn1 = document.querySelector("#btn1")
+        let pszczola = documet.querySelector("#pszczola")
+        btn1.addEventListener('click', function(){
+            pszczola.style.filter = "blur(5px)"
+        })
+    </script>
+</body>
+</html>

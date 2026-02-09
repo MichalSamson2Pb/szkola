@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Kalkulator kosztów montażu</p>
+    <br><br>
+    Szerokość pomieszczenia [m]: <input type="number" id="szer">
+    Długość pomieszczenia [m]: <input type="number" id="dl">
+    <br><br>
+    Typ panelu
+    <br><br>
+    <input type="radio" name="podloga" id="podloga"> Panele laminowane <br>
+    <input type="radio" name="podloga" id="podloga"> Panele winylowe <br>
+    <input type="radio" name="podloga" id="podloga"> Deska podłogowa <br>
+    <button id="btn">oblicz</button>
+
+    <script>
+        let szer = document.querySelector("#szer")
+        let dl = document.querySelector("#dl")
+        let btn = document.querySelector("#btn")
+        let podloga = document.querySelector("#podloga")
+
+        btn.addEventListener("click", function(){
+            let sze = szer.value
+            let dlu = dl.value
+            let cena = dlu * sze
+            document.write(cena)
+        })
+    </script>
+</body>
+</html>

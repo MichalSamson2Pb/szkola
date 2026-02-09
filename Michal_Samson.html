@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #d1{
+        border: 1px black solid;
+        width: 20%;
+        height: 100px;
+        float: left;
+    }
+    #d2{
+        border: 1px black solid;
+        width: 20%;
+        height: 100px;
+        float: left;
+    }
+    #d3{
+        border: 1px black solid;
+        width: 20%;
+        height: 100px;
+        float: left;
+        clear: left;
+    }
+    #d4{
+        border: 1px black solid;
+        width: 20%;
+        height: 100px;
+        float: left;
+    }
+</style>
+<body>
+    <label for="">Kolor: </label><input type="text" id="i1">
+    <br><br><br>
+    <label for="">Div: </label><input type="text" id="i2">
+    
+    <button id="btn" onclick="btn">Guzik</button>
+
+    <br><br><br>
+
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+
+    <script>
+        const btn = document.querySelector("#btn")
+        btn.addEventListener("click", function(){
+            let in1 = document.querySelector("i1").value
+            let label = document.querySelector("#i2").value
+            let div = document.querySelector("#d" + label)
+            div.style = 'background-color: '+ in1
+        })
+    </script>
+</body>
+</html>

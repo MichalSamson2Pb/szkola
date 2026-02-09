@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="l1">
+    <br>
+    <input type="text" id="a">
+    <br>
+    <input type="text" id="b">
+    <br>
+    <input type="text" id="c">
+    <button id="btn1">Dodaj</button>
+    <button id="dbtn">delta</button>
+
+
+    <script>
+        function parzyste(liczba){
+    if (liczba % 2 == 0){
+        return("liczba jest parzysta")
+    } else {
+        return("liczba nie jest parzysta")
+    }
+}
+function delta(a,b,c){
+    let delta = (b*b)-(4*a*c)
+}
+
+const in1 = document.querySelector("#l1")
+const btn = document.querySelector("#btn1")
+const dbtn = document.querySelector("#dbtn")
+const a = document.querySelector("#a")
+const b = document.querySelector("#b")
+const c = document.querySelector("#b")
+
+btn.addEventListener("click", function(){
+    let in1Val = parseInt(in1.value)
+    document.write(parzyste(in1Val))
+})
+parzyste()
+
+    </script>
+</body>
+</html>

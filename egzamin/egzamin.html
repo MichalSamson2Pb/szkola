@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>SKLYP</title>
+</head>
+<body>
+    <header>
+        <h1>SKLYP</h1>
+    </header>
+    <div id="zamowienie">
+        <br>
+        <div id="form">
+            <p>Zamówienie</p>
+            <p>Wybierz zdjęcie:</p>
+            <label for="plik">Wybierz obraz</label>
+            <input type="file" id="plik" accept="image/png, image/jpeg" />
+            <br>
+            <label for="liczba_kopii">Liczba kopii: </label>
+            <input type="number" id="liczba_kopii" min="1">
+            <br>
+            <p>Wybierz rodzaj papieru:</p>
+            <input type="radio" name="radio1" id="blyszczacy" checked>
+            <label for="blyszczacy">Papier błyszczący</label>
+            <input type="radio" name="radio1" id="matowy">
+            <label for="matowy">Papier matowy</label>
+            <br><br>
+            <button type="submit" id="btn1">Dodaj do koszyka</button>
+            <br><br>
+        </div>
+        <div id="koszyk">
+            <p>Koszyk</p>
+            <p>Twoje wybrane produkty pojawią się poniżej:</p>
+            <div id="produkty"></div>
+        </div>
+    </div>
+    <script>
+        const btn1 = document.querySelector("#btn1");
+        const koszyk = document.querySelector("#produkty");
+
+        btn1.addEventListener("click", function przeslij() {
+            let img = document.createElement("img");
+            img.src = URL.createObjectURL(document.querySelector("#plik").files[0]);
+            koszyk.appendChild(img);
+
+
+            const para = document.createElement("p");
+            para.innerText = "jebac sławka"
+            para.className = "kupa"
+            document.body.appendChild(para)
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="in">
+    <button id="btn">sprawdz</button>
+    <script>
+        let reg =  /@gmail.com/
+        let mail = document.querySelector("#in")
+        let btn = document.querySelector("#btn")
+
+
+        btn.addEventListener("click", function(){
+            mail = mail.value
+            if(mail.match(reg)){
+                alert("good boi")
+            }else{
+                alert("zły sławek")
+            }
+        })
+    </script>
+</body>
+</html>
