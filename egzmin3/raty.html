@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" name="wybor" id="kurs_react" value="5000"><label for="">Kurs React.js</label><br>
+    <input type="checkbox" name="wybor" id="kurs_js" value="3000"><label for="">Kurs JavaScript</label><br><br>
+    <label for="">liczba rat: </label><input type="number" id="liczba_rat"><br><br>
+    <select name="" id="miasto">
+        <option value="Warszawa">Warszawa</option>
+        <option value="Katowice">Katowice</option>
+        <option value="Gdańsk">Gdańsk</option>
+    </select><br><br>
+    <p id="p"></p>
+
+
+    <button id="button">Oblicz</button>
+    <script>
+        let guzik = document.getElementById('button')
+        let par = document.getElementById('p')
+        let kurs = 0
+        guzik.addEventListener('click', function(){
+            let kurs1 = document.getElementById('kurs_react').checked
+            let kurs2 = document.getElementById('kurs_js').checked
+            let raty = document.getElementById('liczba_rat').value
+            let miasto = document.getElementById('miasto').value
+            console.log(kurs1, kurs2, raty, miasto)
+            if(kurs1 && kurs2 == 1){
+                kurs = 8000
+            }else
+            {
+                if(kurs1 == 1 && kurs2 == 0){
+                    kurs = 5000
+                }else{
+                    kurs = 3000
+                }
+            }
+            let rata = (kurs / raty)
+            par.innerHTML= "Kurs odbędzie się w "+ miasto +" Koszt całkowity: "+kurs+"zł. Płacisz "+raty+" rat po "+rata
+        })
+
+        
+    </script>
+</body>
+</html>
