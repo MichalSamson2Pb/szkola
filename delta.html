@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delta Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 40px;
+            width: 300px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .input-group {
+            margin: 15px 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            text-align: center;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            background: rgba(255,255,255,0.35);
+            transform: scale(1.05);
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            border-radius: 12px;
+            border: none;
+            background: linear-gradient(135deg, #ff7eb3, #ff758c);
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Liczenie Delty</h1>
+        <form>
+            <div class="input-group">
+                <label>a</label>
+                <input type="text" id="in1">
+            </div>
+
+            <div class="input-group">
+                <label>b</label>
+                <input type="text" id="in2">
+            </div>
+
+            <div class="input-group">
+                <label>c</label>
+                <input type="text" id="in3">
+            </div>
+
+            <button id="btn">Oblicz</button>
+            <div class="result" id="p1">Wynik: -</div>
+        </form>
+    </div>
+
+    <script>
+        let btn = document.getElementById("btn")
+        let p = document.getElementById('p1')
+
+        btn.addEventListener('click', function(e){
+            e.preventDefault()
+
+            let a = parseFloat(document.getElementById("in1").value)
+            let b = parseFloat(document.getElementById("in2").value)
+            let c = parseFloat(document.getElementById("in3").value)
+
+            let wynik = b**2 - 4*a*c
+
+            p.innerHTML = "Wynik: " + wynik
+        })
+    </script>
+
+</body>
+</html>
