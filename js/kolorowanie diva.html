@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <button id="btn1">kocham slawka</button>
+    <button id="btn2">czczonka kursywa</button>
+    <input type="text" id="in1">
+    <input type="text" id="in2">
+    <input type="text" id="in3"><br>
+    <input type="text" id="in4">
+    <select name="" id="sel1">
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="yellow">yellow</option>
+        <option value="blue">blue</option>
+    </select>
+    <script>
+        let div = document.getElementById('div1')
+        let btn = document.getElementById('btn1')
+        let btn2 = document.getElementById('btn2')
+
+        btn2.addEventListener('click', function(e){
+            e.preventDefault()
+            div.style.fontStyle = 'italic'
+        })
+
+        btn.addEventListener('click', function(e){
+            e.preventDefault()
+            let in1 = document.getElementById('in1').value
+            let in2 = document.getElementById('in2').value
+            let in3 = document.getElementById('in3').value
+            div.style.backgroundColor = 'rgb('+in1+','+in2+','+in3+')'
+            let in4 = document.getElementById('in4').value
+            div.innerHTML = in4
+            let sel1 = document.getElementById('sel1').value
+            div.style.color = sel1
+        })
+    </script>
+</body>
+</html>
